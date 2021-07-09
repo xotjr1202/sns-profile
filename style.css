@@ -1,0 +1,139 @@
+/* style.css */
+:root {
+  --main-color: #1ABC9C;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #444;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+/*  
+  1.사진영역높이: 59%
+  2.하단정보영역 높이: 46%
+  3.서체, 색상 설정
+*/
+
+header {
+  position: absolute;
+  width: 100vw;
+}
+
+header > .back-btn {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+header > .toggle-btn {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  background: none;
+  border: none;
+}
+.back-btn, .toggle-btn {
+  font-size: 28px;
+  color: #fff;
+  z-index: 999;
+}
+
+.card {
+  position: relative;
+  width: 100vw; 
+  height: 100vh;
+  background: #ccc;
+}
+.card > figure {
+  height: 59vh;
+  background: #999;
+  background-image: url(images/profile.jpg);
+  background-size: cover;
+}
+
+/* 사진 그라디언트 필터 효과 */
+.card > figure > .filter {
+  position: absolute;
+  width: 100%;
+  height: 59vh;
+  left: 0;
+  top: 0;
+  background: #000;
+  background: linear-gradient(180deg, rgba(0,0,0,1), rgba(0,0,0,0) 33%);
+}
+
+.card .info {
+  height: 46vh;
+  width: 100vw;
+  position: absolute;
+  background: #fff;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card > .info .container {
+  /* outline: 1px solid red; */
+  width: 100vw;
+}
+
+.card > .info .name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.card > .info .location {
+  margin-bottom: 26px;
+}
+.card > .info .count-info {
+  display: flex;
+  margin-bottom: 50px;
+}
+.card > .info .count-info > li {
+    border-right: 1px solid #707070;
+  flex: 1;
+}
+.card > .info .count-info > li:last-child {
+    border-right: none;
+}
+.card > .info .count-info .count {
+  font-size: 22px;
+
+}
+.card > .info .count-info .title {
+  font-size: 12px;
+  color: #707070;
+}
+
+.btn {
+    width: 140px;
+    height: 40px;
+    border: 1px solid var(--main-color);
+}
+.follow-btn {
+    background: var(--main-color);
+    color: #fff;
+    margin-right: 17.5px;
+}
+.message-btn {
+    color: var(--main-color);
+    background: #fff;
+    margin-left: 17.5px;
+}
